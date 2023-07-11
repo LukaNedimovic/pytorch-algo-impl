@@ -80,14 +80,18 @@ if __name__ == "__main__":
         loss.backward()  # Calculate the gradient w.r.t "w" and "b"       
         optimizer.step() # Make a step opposite of gradient to make error smaller
 
-        # Find out current values of w and b from model
+        # Find out current values of w and b from model        
         w, b = -1, -1 # Set them to some random value
-        for name, param in model.named_parameters(): # For each named parameter
-            if param.requires_grad:                  # If it requires gradient (which w and b actually do)
-                if name == "linear.weight":          # Assign them to respectable variables based on name
-                    w = param.data.item()            # Use .item() to get only the value stored, not the complete Tensor 
-                if name == "linear.bias":
-                    b = param.data.item()
+        w = model.linear.weight.item()
+        y = model.linear.bias.item()
+        # for name, param in model.named_parameters(): # For each named parameter
+        #     if param.requires_grad:                  # If it requires gradient (which w and b actually do)
+        #         if name == "linear.weight":          # Assign them to respectable variables based on name
+        #             w = param.data.item()            # Use .item() to get only the value stored, not the complete Tensor 
+        #         if name == "linear.bias":
+        #             b = param.data.item()
+
+
 
         print("Epoch: {}, \tW: {}, \tB: {}, \tLoss: {}".format(epoch, w, b, loss.item())) # Print the data
     
