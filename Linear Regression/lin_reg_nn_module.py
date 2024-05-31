@@ -65,7 +65,7 @@ if __name__ == "__main__":
     optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate) # Stochastic Gradient Descent optimizer is used to make steps that will impact values of w and b 
 
     # Start the training process
-    epochs = 30 # Train model for "30" epochs (also called "iterations")
+    epochs = 30 # Train model for "30" epochs
 
     for epoch in range(epochs):
         optimizer.zero_grad() # Zero out the gradient
