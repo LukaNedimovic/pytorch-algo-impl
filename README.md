@@ -21,6 +21,13 @@ Main idea, that may be contrary to popular preference, is to comment code thorou
       <li><a href="https://github.com/LukaNedimovic/pytorch-algo-impl/blob/main/Linear%20Regression/lin_reg_nn_module.py"> Linear Regression with 2 variables (weight, bias) - PyTorch nn.Module implementation </a></li>
     </ol>
   </li>
+
+  <li> <a href="https://github.com/LukaNedimovic/pytorch-algo-impl/tree/main/Logistic%20Regression"> Logistic Regression </a> 
+    <br/> 
+    <ol type="1">
+      <li><a href="https://github.com/LukaNedimovic/pytorch-algo-impl/blob/main/Logistic%20Regression/Logistic%20Regression.ipynb"> Logistic regression - standard binary classification problem </a></li>
+    </ol>
+  </li>
   
 </ol>
 
