@@ -39,9 +39,10 @@ if __name__ == "__main__":
     b = torch.tensor(2.0, requires_grad=True)  # The bias model is trying to predict
 
     # Create data
+
     x_data = np.arange(-5, 5, 0.4, dtype=np.float32).reshape(-1, 1) # Create a column vector of values
-    y_data = 3 * x_data + 2 # The function the model is using to predict w and b
-    # y_data = y_data + 0.2 * np.random.rand(x_data.shape[0], x_data.shape[1]) # Optional: Add Gaussian noise
+    y_data = 3 * x_data + 10 # The function the model is using to predict w and b
+    y_data = y_data + 0.2 * np.random.rand(x_data.shape[0], x_data.shape[1]) # Optional: Add Gaussian noise
     X = torch.tensor(x_data, dtype=torch.float32, requires_grad=True).to(device) # Create input tensor out of numpy column vector 
     Y = torch.tensor(y_data, dtype=torch.float32, requires_grad=True).to(device) # Create ideal output tensor based on function f(x)
     
